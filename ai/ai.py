@@ -1,9 +1,3 @@
-## Dummy Prediction function
-
-def predict_flammability(data):
-    return 33
-
-
 from openai import OpenAI
 import openai
 import os
@@ -12,6 +6,7 @@ import db
 
 load_dotenv()
 
+## AI CHAT
 model = os.getenv('MODEL')
 api = os.getenv('OPENAI_API')
 client = OpenAI(base_url=os.getenv("BASE_URL_GROQ"), api_key=api)
@@ -26,3 +21,10 @@ def get_explanation(_id):
 
     except Exception as e:
         return False
+
+
+## Dummy Prediction function
+
+def predict_flammability(data):
+    return 33
+
